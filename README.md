@@ -1,1 +1,0 @@
-# gwangmyeong-salary
