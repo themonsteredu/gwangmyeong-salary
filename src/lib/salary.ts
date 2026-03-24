@@ -6,7 +6,7 @@ export function calculateHoursWorked(
 ): number {
   const [sh, sm] = startTime.split(":").map(Number);
   const [eh, em] = endTime.split(":").map(Number);
-  let startMinutes = sh * 60 + sm;
+  const startMinutes = sh * 60 + sm;
   let endMinutes = eh * 60 + em;
   // 자정을 넘긴 경우
   if (endMinutes <= startMinutes) {
