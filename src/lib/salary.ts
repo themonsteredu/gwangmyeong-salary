@@ -1,20 +1,5 @@
 import { Employee, WorkRecord, MonthlySummary } from "@/types";
 
-export function calculateHoursWorked(
-  startTime: string,
-  endTime: string
-): number {
-  const [sh, sm] = startTime.split(":").map(Number);
-  const [eh, em] = endTime.split(":").map(Number);
-  const startMinutes = sh * 60 + sm;
-  let endMinutes = eh * 60 + em;
-  // 자정을 넘긴 경우
-  if (endMinutes <= startMinutes) {
-    endMinutes += 24 * 60;
-  }
-  return Math.round(((endMinutes - startMinutes) / 60) * 100) / 100;
-}
-
 // 주휴수당 계산: 1주 15시간 이상 근무 시 주휴수당 발생
 // 주휴수당 = (1주 총 근무시간 / 40) × 8 × 시급
 export function calculateWeeklyHolidayPay(

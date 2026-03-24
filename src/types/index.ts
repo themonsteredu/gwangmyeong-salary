@@ -9,9 +9,7 @@ export interface WorkRecord {
   id: string;
   employeeId: string;
   date: string; // YYYY-MM-DD
-  startTime: string; // HH:mm
-  endTime: string; // HH:mm
-  hoursWorked: number;
+  hoursWorked: number; // 총 근무시간 (시간 단위)
 }
 
 export interface MonthlySummary {
